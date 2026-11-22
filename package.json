@@ -1,0 +1,51 @@
+{
+  "name": "dsh-gloss",
+  "version": "0.1.0",
+  "description": "Select-to-look-up English terms in DeepSeek Harness conversations: instant IPA and Chinese technical definitions from a free online dictionary, with technical senses ranked first and an offline fallback.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "cordis.patch.yml",
+    "icon.svg",
+    "NOTICE",
+    "LICENSE",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "manifestVersion": 1,
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-connection"
+      ],
+      "platform": "web"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.5"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "gloss",
+    "selection",
+    "dictionary",
+    "terminology",
+    "translation",
+    "vocabulary",
+    "english"
+  ]
+}
