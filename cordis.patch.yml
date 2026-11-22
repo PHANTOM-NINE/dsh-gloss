@@ -1,0 +1,8 @@
+# dsh-gloss — activates only from the bundled patch file, never edits the
+# user's profile patch. One entry: host half loads via this row, browser half
+# loads via dsh.client.inject + window.__ModuleLoader__.load (same package).
+# Duplicate registration throws (webserver: :325), so an occupied
+# /api/gloss/ path degrades to offline-only instead of failing.
+- insert:
+    - id: dsh-gloss
+      name: dsh-gloss
